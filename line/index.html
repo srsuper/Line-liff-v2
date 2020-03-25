@@ -1,51 +1,47 @@
 <head>
-<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <title>SeeOil Application</title>
+    <title>LIFF Starter</title>
     <link rel="stylesheet" href="style.css">
-    
 </head>
+
 <body>
     <script>
+window.onload = function (e) {
+    liff.init(function (data) {
+        initializeApp(data);
+    });
+};
 
-            function initializeApp(data) {
-                var userID = data.context.userId;
-                var groupID = data.context.groupId;
-                 if (groupID == null){
+function initializeApp(data) {
+   
+                    var userId = data.context.userId;
+                    var groupId = data.context.groupId;
+                    if (groupID == null){
                     alert('คุณไม่ได้รับอนุญาติให้เข้าใช้งาน กรุณาติดต่อฝ่ายขาย')
                 } else {
-                    $.post("test.php",{groupid:groupid},
-                    function(data){
-                        if (data != null){
-                            var groupid = data
-                            console.log(groupid)
-                                $.post("checkpermissionid.php",{userid:userID,groupid:groupID},
-                                        function(data1){
 
-                                       
-                                       console.log(data1)   
+                    $.post ("checkpermissionid.php" , {userid:userId , groupid:groupId} ,
+                                function (data) {
+                                    document.write (data)
 
-                                })
-                        } else {
-                            alert('No data')
-                        }
-                        
-                        
-                    })
-   
-                    }
+                                } else {
+
+                                    document.write ('คุณไม่ได้รับอนุญาติให้เข้าใช้งาน กรุณาติดต่อฝ่ายขาย')
+                                } )
+
+
 
                     }
 
-            initializeApp()
+    
+}
 
+  </script>  
+    
 
-            
-            
-        
-    </script>
+    <div>
     
     <script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
-    
+   
 </body>

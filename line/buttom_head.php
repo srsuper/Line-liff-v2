@@ -1,4 +1,4 @@
-<div class="buttongroup">
+<div class="buttongroup" align="right">
         <div class="buttonrow">
             <a href='inventory.php'><button>น้ำมันคงเหลือ</button></a>
             <a href='alarm.php'><button>การแจ้งเตือน</button></a>

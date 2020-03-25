@@ -1,20 +1,37 @@
 <?php 
-session_start();
-$site_id_from_liff = $_SESSION['type_userid'];
-$type_for_whare = $_SESSION['type_where'];
-$for_check_bir = $_SESSION['bir_status_check'];
 
-echo $type_for_whare;
-echo $site_id_from_liff;
-echo $for_check_bir;
+session_start();
+
+
+
+$site_id_from_liff = $_SESSION['type_userid']; // เช็คว่าข้อมูลว่าให้ส่งเป็น 35 หรือ 18 คือ ส่งเป็นค่า user_id หรือ site_id
+$type_for_whare = $_SESSION['type_where']; // เช็คว่า คือ user_id หรืือ site_id
+$for_check_bir = $_SESSION['bir_status_check']; // เช็คว่า สถานะคือมี bir หรือไม่
+
+// $_SESSION['type_where'] = "user_id";
+// $_SESSION['type_userid'] = "35";
+// $_SESSION['bir_status_check'] = "yes";
+
+
+// $site_id_from_liff = $_SESSION['type_userid']; // เช็คว่าข้อมูลว่าให้ส่งเป็น 35 หรือ 18 คือ ส่งเป็นค่า user_id หรือ site_id
+// $type_for_whare = $_SESSION['type_where']; // เช็คว่า คือ user_id หรืือ site_id
+// $for_check_bir = $_SESSION['bir_status_check']; // เช็คว่า สถานะคือมี bir หรือไม่
+
+
+
+
+// echo $type_for_whare;
+// echo $site_id_from_liff;
+// echo $for_check_bir;
 //$site_id_from_liff = $site_id_from_liff;
 //$type_for_whare = $type_for_whare;
 
-echo $aa = 'site data from liff'.''.$site_id_from_liff;
-echo $bb = 'type for where '.''.$type_for_whare;
+// echo $aa = 'site data from liff'.''.$site_id_from_liff;
+// echo $bb = 'type for where '.''.$type_for_whare;
 
 include 'buttom_head.php';
 include 'connectdb.php';
+include 'config.php';
 ?>
 
 <head>
@@ -74,7 +91,7 @@ include 'connectdb.php';
 
 
 <?php // Past for Alarm
-$servername = "www.seeoil-web.com";
+$servername = "www.see-oilweb.com";
 $username = "seeoil";
 $password = "25242524";//ไม่มีก็ไม่ต้องใส่
 $dbName = "seeoil";
@@ -169,7 +186,7 @@ $query = "SELECT
 
 
 <?php // Pass for delivery_adj 
-$servername = "www.seeoil-web.com";
+$servername = "www.see-oilweb.com";
 $username = "seeoil";
 $password = "25242524";//ไม่มีก็ไม่ต้องใส่
 $dbName = "seeoil";
@@ -204,7 +221,7 @@ starting_date_time,
 
 
 <?php
-$servername = "www.seeoil-web.com";
+$servername = "www.see-oilweb.com"; // pas for delivery in process
 $username = "seeoil";
 $password = "25242524";//ไม่มีก็ไม่ต้องใส่
 $dbName = "seeoil";
@@ -235,7 +252,7 @@ $query2 = "SELECT
 ?>
 
 <?php
-$servername = "www.seeoil-web.com";
+$servername = "www.see-oilweb.com"; // pass for check water in tank 
 $username = "seeoil";
 $password = "25242524";//ไม่มีก็ไม่ต้องใส่
 $dbName = "seeoil";
@@ -265,7 +282,7 @@ $query3 = "SELECT
 ?>
 
 <?php // Pass for delivery
-$servername = "www.seeoil-web.com";
+$servername = "www.see-oilweb.com";
 $username = "seeoil";
 $password = "25242524";//ไม่มีก็ไม่ต้องใส่
 $dbName = "seeoil";

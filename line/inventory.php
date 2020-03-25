@@ -230,12 +230,12 @@ include 'connectdb.php';
                         } 
                 
                 ?>
-              <tr>
+              <!-- <tr>
                 <td colspan="1" align="right">คงเหลือรวม : </td>
                 <td><b></b><?php echo number_format($total); ?></td>
 
                 </tr>
-                <?php unset ($total);?>
+                <?php unset ($total);?> -->
             </table>
         </div>
     

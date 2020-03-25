@@ -1,6 +1,6 @@
 <?php
 	
-	$dbcon = mysqli_connect ('www.seeoil-web.com','seeoil','25242524','seeoil');
+	$dbcon = mysqli_connect ('www.see-oilweb.com','seeoil','25242524','seeoil');
 
 	if (mysqli_connect_errno()){
 
